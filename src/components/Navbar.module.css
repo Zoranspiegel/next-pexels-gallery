@@ -1,0 +1,9 @@
+.navbar__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--nav-bg-color);
+  color: var(--fg-color);
+  padding: 1.5rem;
+}
