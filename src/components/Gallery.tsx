@@ -68,23 +68,23 @@ export default function Gallery({ search }: { search: string }) {
 
   return (
     <div className={styles.gallery__container}>
-      {results && <h2>{`Total Results: ${results}`}</h2>}
+      {results && <h3>{`Total Results: ${results}`}</h3>}
+      {error && (
+        <>
+          <Error>{error}</Error>
+          <button
+            onClick={() => {
+              getPictures();
+            }}
+          >
+            Try Again
+          </button>
+        </>
+      )}
       <div className={styles.gallery__grid}>
         {pictures.map((picture) => (
           <Picture key={Math.random().toString(36)} picture={picture} />
         ))}
-        {error && (
-          <>
-            <Error>{error}</Error>
-            <button
-              onClick={() => {
-                getPictures();
-              }}
-            >
-              Try Again
-            </button>
-          </>
-        )}
       </div>
       {!loading && <div className={styles.observer} ref={observerRef}></div>}
       {loading && <Loading />}
