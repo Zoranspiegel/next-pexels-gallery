@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
-import './global.css';
+import { Raleway } from 'next/font/google';
 import Navbar from '@/components/Navbar';
+import './global.css';
+
+const ralewayFont = Raleway({
+  subsets: ['latin'],
+  weight: 'variable',
+  variable: '--font-raleway'
+});
 
 export const metadata: Metadata = {
   title: "Zoran's Pexels Gallery",
@@ -14,7 +21,7 @@ export default function rootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={ralewayFont.variable}>
         <Navbar />
         {children}
       </body>

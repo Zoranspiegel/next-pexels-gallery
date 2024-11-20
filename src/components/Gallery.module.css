@@ -11,7 +11,7 @@
 }
 
 .results__title {
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .results__highlight {
@@ -21,6 +21,7 @@
 
 .results__number {
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .gallery__grid {

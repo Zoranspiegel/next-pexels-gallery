@@ -21,6 +21,7 @@ export default function Picture({ picture }: { picture: PictureI }) {
       >
         <Link href={picture.url} target="_blank">
           <Image
+          className={styles.picture__image}
             src={picture.src.medium}
             alt={picture.alt}
             width={pictureWidth}
