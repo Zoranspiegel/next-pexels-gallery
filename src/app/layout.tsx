@@ -1,7 +1,13 @@
 import type { Metadata } from 'next';
-import { Raleway } from 'next/font/google';
+import { Raleway, Metamorphous } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import './global.css';
+
+const font = Metamorphous({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-font'
+});
 
 const ralewayFont = Raleway({
   subsets: ['latin'],
@@ -21,7 +27,7 @@ export default function rootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ralewayFont.variable}>
+      <body className={`${ralewayFont.variable} ${font.variable}`}>
         <Navbar />
         {children}
       </body>

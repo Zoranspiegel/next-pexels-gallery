@@ -18,7 +18,7 @@
 }
 
 .picture__image:hover {
-  filter: brightness(1.3) saturate(0.8) contrast(0.6);
+  filter: brightness(0.7);
 }
 
 .picture__photographer {

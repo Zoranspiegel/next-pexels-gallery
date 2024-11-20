@@ -4,10 +4,11 @@
   align-items: center;
   padding: 2rem;
   gap: 1rem;
+  user-select: none;
 }
 
 .results__container {
-  text-align: center;
+  text-align: center;  
 }
 
 .results__title {
