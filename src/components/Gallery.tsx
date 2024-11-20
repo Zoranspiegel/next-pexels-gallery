@@ -74,7 +74,7 @@ export default function Gallery({ search }: { search: string }) {
             Total Results
             {search && ' for '}
             {search && (
-              <span className={styles.results__highlight}>{search}</span>
+              <span className={styles.results__highlight}>{decodeURIComponent(search)}</span>
             )}
           </h3>
           <h4 className={styles.results__number}>{results}</h4>
