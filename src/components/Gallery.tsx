@@ -68,7 +68,18 @@ export default function Gallery({ search }: { search: string }) {
 
   return (
     <div className={styles.gallery__container}>
-      {results && <h3>{`Total Results: ${results}`}</h3>}
+      {results && (
+        <div className={styles.results__container}>
+          <h3 className={styles.results__title}>
+            Total Results
+            {search && ' for '}
+            {search && (
+              <span className={styles.results__highlight}>{search}</span>
+            )}
+          </h3>
+          <h4 className={styles.results__number}>{results}</h4>
+        </div>
+      )}
       {error && (
         <>
           <Error>{error}</Error>
